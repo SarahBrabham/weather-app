@@ -80,7 +80,7 @@ body {
 #app {
   background-image: url("./assets/cold-bg.jpg");
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   transition: 0.4s;
 }
 
@@ -92,7 +92,7 @@ body {
 main {
   min-height: 100vh;
   padding: 25px;
-  background-image: linear-gradient(
+ background-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.25),
     rgba(0, 0, 0, 0.75)
@@ -170,5 +170,16 @@ main {
   font-weight: 700;
   font-style: italic;
   text-shadow: 3px 6px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (min-width: 768px) {
+  body{
+    max-width: 1000px;
+    margin-inline: auto;
+    background-color: #637C91;
+  }
+  body:has(#app.warm) {
+    background-color: #762951;
+  }
 }
 </style>
